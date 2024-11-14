@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnerScript : MonoBehaviour
+{
+    public GameObject cubePrefab;
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(cubePrefab, transform.position, Quaternion.identity);
+        }
+    }
+}
+
+//couple notes: 
+
+//1. Create a game object that will be spawned and make it a prefab. Then, delete it from the hierarchy tab. 
+//2. Create an empty game object called "Spawner" in the hierarchy. Place the spawner in the location of where you want the game object to spawn. 
+//3. Attach this script to the spawner 
+//4. Finally, add the prefab game object into the script in Unity.
